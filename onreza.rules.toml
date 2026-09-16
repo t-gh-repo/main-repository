@@ -5,5 +5,7 @@ id = "register-route"
 name = "Registration endpoint"
 when = { path = { exact = "/api/register" } }
 action.pipeline = [
-  { steps = [{ function = "register.nrz-fn" }] }
+  { steps = [
+      { function = "register.nrz-fn" }
+  ]}
 ]
