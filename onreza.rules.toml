@@ -1,0 +1,10 @@
+# onreza.rules.toml
+schema = "EDGE_RULE_SET_V1"
+
+[[rule]]
+id = "register-route"
+name = "Registration endpoint"
+when = { path = { exact = "/api/register" } }
+action.pipeline = [
+  { function = "register.nrz-fn" }
+]
